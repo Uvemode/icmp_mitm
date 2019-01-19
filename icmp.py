@@ -2,9 +2,7 @@
 #  - static ARP entries
 #  - Dynamic ARP inspection
 
-# Prerequisites:
-# echo 1 > /proc/sys/net/ipv4/ip_forward
-# iptables -t nat -A POSTROUTING -s 10.100.13.0/255.255.255.0 -o tap0 -j MASQUERADE
+#Usage: python icmp.py -p DPORT -r ROUTERaddr -a ATTACKERaddr -t VICTIMaddr -s SERVERaddr -S IPTABLE SUBNET ex.192.168.0.0 -M SUBNET MASK ex.255.255.255.0 -i interface
 
 import argparse
 import random
